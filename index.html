@@ -1,3 +1,4 @@
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -16,13 +17,12 @@
     :root {
       --bg: #050508;
       --white: #ffffff;
-      --muted: rgba(255, 255, 255, 0.6);
-      --line: rgba(255, 255, 255, 0.16);
-      --glass: rgba(255, 255, 255, 0.07);
+      --muted: rgba(255,255,255,.6);
+      --line: rgba(255,255,255,.16);
+      --glass: rgba(255,255,255,.07);
     }
 
-    html,
-    body {
+    html, body {
       width: 100%;
       height: 100%;
       overflow: hidden;
@@ -41,9 +41,9 @@
       height: 100vh;
       overflow: hidden;
       background:
-        radial-gradient(circle at 50% 45%, rgba(255,255,255,0.08), transparent 24%),
-        radial-gradient(circle at 15% 15%, rgba(255,255,255,0.04), transparent 25%),
-        radial-gradient(circle at 85% 85%, rgba(255,255,255,0.04), transparent 25%),
+        radial-gradient(circle at 50% 45%, rgba(255,255,255,.08), transparent 24%),
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,.04), transparent 25%),
+        radial-gradient(circle at 85% 85%, rgba(255,255,255,.04), transparent 25%),
         #050508;
     }
 
@@ -52,32 +52,27 @@
     .stars {
       position: absolute;
       inset: 0;
-      opacity: 0.7;
+      opacity: .7;
       background-image:
-        radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,255,255,0.45) 1px, transparent 1.5px);
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,.45) 1px, transparent 1.5px);
       background-size: 95px 95px, 160px 160px;
       background-position: 20px 30px, 60px 80px;
       animation: starsMove 20s linear infinite;
     }
 
     @keyframes starsMove {
-      from {
-        transform: translate(0, 0);
-      }
-
-      to {
-        transform: translate(-50px, -35px);
-      }
+      from { transform: translate(0,0); }
+      to { transform: translate(-50px,-35px); }
     }
 
     .grid {
       position: absolute;
       inset: -30%;
-      opacity: 0.14;
+      opacity: .14;
       background-image:
-        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
       background-size: 70px 70px;
       transform: perspective(700px) rotateX(66deg) translateY(20%);
       transform-origin: center bottom;
@@ -85,13 +80,8 @@
     }
 
     @keyframes gridMove {
-      from {
-        background-position: 0 0, 0 0;
-      }
-
-      to {
-        background-position: 0 70px, 70px 0;
-      }
+      from { background-position: 0 0, 0 0; }
+      to { background-position: 0 70px, 70px 0; }
     }
 
     .orb {
@@ -106,7 +96,7 @@
       height: 260px;
       left: -90px;
       top: 12%;
-      background: rgba(255,255,255,0.035);
+      background: rgba(255,255,255,.035);
       animation: floatOne 9s ease-in-out infinite;
     }
 
@@ -115,20 +105,16 @@
       height: 300px;
       right: -100px;
       bottom: 5%;
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,.04);
       animation: floatTwo 11s ease-in-out infinite;
     }
 
     @keyframes floatOne {
-      50% {
-        transform: translate(45px, -30px);
-      }
+      50% { transform: translate(45px,-30px); }
     }
 
     @keyframes floatTwo {
-      50% {
-        transform: translate(-45px, 25px);
-      }
+      50% { transform: translate(-45px,25px); }
     }
 
     /* INTRO */
@@ -156,28 +142,27 @@
 
     .tag {
       font-size: 10px;
-      letter-spacing: 0.38em;
+      letter-spacing: .38em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,.4);
       margin-bottom: 24px;
     }
 
     .intro-name {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(65px, 15vw, 160px);
+      font-size: clamp(65px,15vw,160px);
       font-weight: 400;
-      line-height: 0.9;
-      letter-spacing: -0.06em;
+      line-height: .9;
+      letter-spacing: -.06em;
       animation: revealName 2s cubic-bezier(.16,1,.3,1) forwards;
     }
 
     @keyframes revealName {
       from {
         opacity: 0;
-        transform: translateY(45px) scale(0.82);
+        transform: translateY(45px) scale(.82);
         filter: blur(18px);
       }
-
       to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -204,13 +189,13 @@
       backdrop-filter: blur(18px);
       opacity: 0;
       animation: fadeIn 1.2s 1.9s ease forwards;
-      transition: 0.3s ease;
+      transition: .3s ease;
     }
 
     .enter:hover {
       transform: translateY(-4px);
-      background: rgba(255,255,255,0.12);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+      background: rgba(255,255,255,.12);
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
     }
 
     @keyframes fadeIn {
@@ -218,7 +203,6 @@
         opacity: 0;
         transform: translateY(12px);
       }
-
       to {
         opacity: 1;
         transform: translateY(0);
@@ -236,7 +220,7 @@
       align-items: center;
       padding: 25px;
       opacity: 0;
-      transform: scale(0.9) translateZ(-180px);
+      transform: scale(.9) translateZ(-180px);
       pointer-events: none;
       transition:
         opacity 1s ease,
@@ -253,7 +237,7 @@
 
     .card {
       position: relative;
-      width: min(760px, 94vw);
+      width: min(760px,94vw);
       min-height: 590px;
       padding: 42px;
       border-radius: 34px;
@@ -261,15 +245,15 @@
       background:
         linear-gradient(
           145deg,
-          rgba(255,255,255,0.10),
-          rgba(255,255,255,0.025)
+          rgba(255,255,255,.10),
+          rgba(255,255,255,.025)
         );
       backdrop-filter: blur(28px);
       box-shadow:
-        0 45px 110px rgba(0,0,0,0.55),
-        inset 0 1px 0 rgba(255,255,255,0.08);
+        0 45px 110px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.08);
       transform-style: preserve-3d;
-      transition: transform 0.2s ease;
+      transition: transform .2s ease;
       overflow: hidden;
     }
 
@@ -281,7 +265,7 @@
       right: -140px;
       top: -160px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.045);
+      background: rgba(255,255,255,.045);
       filter: blur(50px);
     }
 
@@ -293,7 +277,7 @@
       left: -130px;
       bottom: -160px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.035);
+      background: rgba(255,255,255,.035);
       filter: blur(50px);
     }
 
@@ -308,9 +292,9 @@
 
     .id {
       font-size: 10px;
-      letter-spacing: 0.25em;
+      letter-spacing: .25em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.42);
+      color: rgba(255,255,255,.42);
     }
 
     .status {
@@ -318,8 +302,8 @@
       padding: 7px 12px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      color: rgba(255,255,255,0.62);
-      background: rgba(255,255,255,0.035);
+      color: rgba(255,255,255,.62);
+      background: rgba(255,255,255,.035);
     }
 
     .main {
@@ -330,9 +314,9 @@
     }
 
     .label {
-      color: rgba(255,255,255,0.38);
+      color: rgba(255,255,255,.38);
       font-size: 10px;
-      letter-spacing: 0.3em;
+      letter-spacing: .3em;
       text-transform: uppercase;
     }
 
@@ -340,15 +324,15 @@
       margin-top: 17px;
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 400;
-      font-size: clamp(47px, 9vw, 88px);
-      line-height: 0.96;
-      letter-spacing: -0.045em;
+      font-size: clamp(47px,9vw,88px);
+      line-height: .96;
+      letter-spacing: -.045em;
     }
 
     .description {
       margin-top: 25px;
       max-width: 620px;
-      color: rgba(255,255,255,0.66);
+      color: rgba(255,255,255,.66);
       line-height: 1.8;
       font-size: 15px;
     }
@@ -356,7 +340,7 @@
     .typing {
       margin-top: 20px;
       min-height: 26px;
-      color: rgba(255,255,255,0.88);
+      color: rgba(255,255,255,.88);
       font-family: Georgia, "Times New Roman", serif;
       font-style: italic;
       font-size: 17px;
@@ -369,13 +353,11 @@
       margin-left: 4px;
       background: white;
       vertical-align: middle;
-      animation: blink 0.8s infinite;
+      animation: blink .8s infinite;
     }
 
     @keyframes blink {
-      50% {
-        opacity: 0;
-      }
+      50% { opacity: 0; }
     }
 
     /* BUTTONS */
@@ -396,29 +378,29 @@
       border-radius: 999px;
       cursor: pointer;
       font-size: 13px;
-      transition: 0.3s ease;
+      transition: .3s ease;
     }
 
     .claim {
       border: 0;
       background: white;
       color: #08080b;
-      box-shadow: 0 14px 40px rgba(255,255,255,0.10);
+      box-shadow: 0 14px 40px rgba(255,255,255,.10);
     }
 
     .claim:hover {
       transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 20px 55px rgba(255,255,255,0.18);
+      box-shadow: 0 20px 55px rgba(255,255,255,.18);
     }
 
     .maybe {
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.05);
       color: white;
     }
 
     .maybe:hover {
-      background: rgba(255,255,255,0.10);
+      background: rgba(255,255,255,.10);
     }
 
     .footer {
@@ -429,13 +411,13 @@
       display: flex;
       justify-content: space-between;
       z-index: 2;
-      color: rgba(255,255,255,0.24);
+      color: rgba(255,255,255,.24);
       font-size: 9px;
-      letter-spacing: 0.16em;
+      letter-spacing: .16em;
       text-transform: uppercase;
     }
 
-    /* FINAL SCREEN */
+    /* FINAL */
 
     .final {
       position: fixed;
@@ -449,8 +431,8 @@
       background:
         radial-gradient(
           circle at center,
-          rgba(255,255,255,0.10),
-          rgba(5,5,8,0.98) 56%
+          rgba(255,255,255,.10),
+          rgba(5,5,8,.98) 56%
         );
       opacity: 0;
       pointer-events: none;
@@ -476,7 +458,6 @@
         opacity: 0;
         transform: translateY(30px);
       }
-
       to {
         opacity: 1;
         transform: translateY(0);
@@ -485,23 +466,23 @@
 
     .final-small {
       font-size: 10px;
-      letter-spacing: 0.34em;
-      color: rgba(255,255,255,0.38);
+      letter-spacing: .34em;
+      color: rgba(255,255,255,.38);
       text-transform: uppercase;
       margin-bottom: 25px;
     }
 
     .final-title {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(50px, 10vw, 108px);
+      font-size: clamp(50px,10vw,108px);
       font-weight: 400;
-      line-height: 0.92;
-      letter-spacing: -0.05em;
+      line-height: .92;
+      letter-spacing: -.05em;
     }
 
     .final-text {
       margin-top: 28px;
-      color: rgba(255,255,255,0.70);
+      color: rgba(255,255,255,.70);
       font-size: 15px;
       line-height: 1.9;
     }
@@ -511,6 +492,12 @@
       font-family: Georgia, "Times New Roman", serif;
       font-size: 24px;
       font-style: italic;
+    }
+
+    .whatsapp-note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: rgba(255,255,255,.35);
     }
 
     /* PARTICLES */
@@ -570,7 +557,7 @@
 
       .claim,
       .maybe {
-        width: min(290px, 100%);
+        width: min(290px,100%);
       }
 
       .footer {
@@ -687,7 +674,7 @@
     </main>
 
 
-    <!-- FINAL REVEAL -->
+    <!-- FINAL SCREEN -->
 
     <section class="final" id="final">
 
@@ -702,7 +689,6 @@
         </h2>
 
         <p class="final-text">
-
           Claudia is officially my HG. 🤍<br><br>
 
           My favorite person.<br>
@@ -715,11 +701,14 @@
 
           Thanks for being one of those rare people
           who makes life a little better just by being around.
-
         </p>
 
         <div class="final-name">
           — Deyshine
+        </div>
+
+        <div class="whatsapp-note">
+          Your answer has been prepared for WhatsApp 💬
         </div>
 
       </div>
@@ -814,10 +803,25 @@
     });
 
 
-    /* YES BUTTON */
+    /* YES BUTTON + WHATSAPP */
 
     yesBtn.addEventListener("click", () => {
 
+      const yourNumber = "233555158842";
+
+      const message =
+        "Hey Deyshine 😭🤍 I said YES! I'll be your HG.";
+
+      const whatsappURL =
+        "https://wa.me/" +
+        yourNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+      // Open WhatsApp with the message ready to send
+      window.open(whatsappURL, "_blank");
+
+      // Show the cinematic success screen
       experience.classList.remove("show");
 
       createParticles();
@@ -846,7 +850,7 @@
     maybeBtn.addEventListener("click", moveMaybe);
 
 
-    /* PARTICLE CELEBRATION */
+    /* PARTICLES */
 
     function createParticles() {
 
